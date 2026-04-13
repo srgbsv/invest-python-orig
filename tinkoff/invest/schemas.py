@@ -134,6 +134,8 @@ class AccountType(_grpc_helpers.Enum):
     ACCOUNT_TYPE_TINKOFF = 1
     ACCOUNT_TYPE_TINKOFF_IIS = 2
     ACCOUNT_TYPE_INVEST_BOX = 3
+    ACCOUNT_TYPE_INVEST_PULSE = 7
+
 
 
 class AccountStatus(_grpc_helpers.Enum):
@@ -270,6 +272,7 @@ class RealExchange(_grpc_helpers.Enum):
     REAL_EXCHANGE_MOEX = 1
     REAL_EXCHANGE_RTS = 2
     REAL_EXCHANGE_OTC = 3
+    REAL_EXCHANGE_OTHER = 4
 
 
 class PortfolioSubscriptionStatus(_grpc_helpers.Enum):

@@ -68,6 +68,10 @@ enum AccountType {
   ACCOUNT_TYPE_TINKOFF = 1; //Брокерский счёт Тинькофф.
   ACCOUNT_TYPE_TINKOFF_IIS = 2; //ИИС счёт.
   ACCOUNT_TYPE_INVEST_BOX = 3; //Инвесткопилка.
+  ACCOUNT_TYPE_INVEST_FUND = 4; //Фонд денежного рынка.
+  ACCOUNT_TYPE_DEBIT = 5; //Дебетовый карточный счeт.
+  ACCOUNT_TYPE_SAVING = 6; //Накопительный счeт.
+  ACCOUNT_TYPE_SMART = 7; //Накопительный счeт.
 }
 
 //Статус счёта.
@@ -76,6 +80,7 @@ enum AccountStatus {
   ACCOUNT_STATUS_NEW = 1; //Новый, в процессе открытия.
   ACCOUNT_STATUS_OPEN = 2; //Открытый и активный счёт.
   ACCOUNT_STATUS_CLOSED = 3; //Закрытый счёт.
+  ACCOUNT_STATUS_ALL = 4; //Все счета
 }
 
 //Запрос маржинальных показателей по счёту

@@ -76,7 +76,7 @@ message PostOrderRequest {
   OrderDirection direction = 4; //Направление операции.
   string account_id = 5; //Номер счёта.
   OrderType order_type = 6; //Тип заявки.
-  string order_id = 7; //Идентификатор запроса выставления поручения для целей идемпотентности. Максимальная длина 36 символов.
+  string order_id = 7; //Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов.
   string instrument_id = 8; //Идентификатор инструмента, принимает значения Figi или Instrument_uid.
 }
 
@@ -90,7 +90,7 @@ message PostOrderResponse {
   int64 lots_executed = 4; //Исполнено лотов.
 
   MoneyValue initial_order_price = 5; //Начальная цена заявки. Произведение количества запрошенных лотов на цену.
-  MoneyValue executed_order_price = 6; //Исполненная средняя цена 1 одного инструмента в заявки.
+  MoneyValue executed_order_price = 6; //Исполненная средняя цена одного инструмента в заявке.
   MoneyValue total_order_amount = 7; //Итоговая стоимость заявки, включающая все комиссии.
   MoneyValue initial_commission = 8; //Начальная комиссия. Комиссия рассчитанная при выставлении заявки.
   MoneyValue executed_commission = 9; //Фактическая комиссия по итогам исполнения заявки.
@@ -153,7 +153,7 @@ message OrderState {
   OrderType order_type = 17; //Тип заявки.
   google.protobuf.Timestamp order_date = 18; //Дата и время выставления заявки в часовом поясе UTC.
   string instrument_uid = 19; //UID идентификатор инструмента.
-  string order_request_id = 20; //Идентификатор ключа идемпотентности, переданный клиентом.
+  string order_request_id = 20; //Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
 }
 
 //Сделки в рамках торгового поручения.
